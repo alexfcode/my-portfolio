@@ -6,6 +6,7 @@ import styled from 'styled-components'
 export const Main = () => {
     return (
         <StyledMain>
+            <FlexWrapper justify='space-around' align='center'>
                 <FlexWrapper direction='column'>
                     <h2>
                         Hi 👋,
@@ -21,6 +22,8 @@ export const Main = () => {
                     </h1>
                 </FlexWrapper>
                 <Photo src={mainPhoto} alt="" />
+            </FlexWrapper>
+
         </StyledMain>
     )
 }
@@ -29,15 +32,12 @@ const Photo = styled.img`
     width: 350x;
     height: 350px;
     background: linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(#E70FAA, #00C0FD) border-box;
+                linear-gradient(#E70FAA, #00C0FD) border-box;
     border: 9px solid transparent;
     border-radius: 50%;
+    object-fit: cover;
 `
 const StyledMain = styled.section`
-    min-height: 50vh;
     background-color: #8ef185;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 `
 
