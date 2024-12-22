@@ -8,17 +8,17 @@ export const SocialLinks = () => {
             <ul>
                 <li>
                     <StyledLink href="">
-                        <Icon iconId="github_big" width={30}height={30} viewBox='0 0 30 30'/>
+                        <Icon iconId="github_big" width="30"height="30" viewBox='0 0 30 30'/>
                     </StyledLink>
                 </li>
                 <li>
                     <StyledLink href="">
-                        <Icon iconId="twitter" width={30}height={30} viewBox='0 0 30 30'/>
+                        <Icon iconId="twitter" width="30"height="30" viewBox='0 0 30 30'/>
                     </StyledLink>
                 </li>
                 <li>
                     <StyledLink href="">
-                        <Icon iconId="linkedin" width={30}height={30} viewBox='0 0 30 30'/>
+                        <Icon iconId="linkedin" width="30"height="30" viewBox='0 0 30 30'/>
                     </StyledLink>
                 </li>
             </ul>

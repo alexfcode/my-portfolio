@@ -10,7 +10,7 @@ export const Header = () => {
     return (
 
         <StyledHeader>
-            <FlexWrapper>
+            <FlexWrapper justify='space-between'>
                 <Logo />
                 <Menu />
                 <SocialLinks />
