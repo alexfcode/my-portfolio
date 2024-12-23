@@ -26,10 +26,8 @@ export const Menu = () => {
 };
 
 const StyledNav = styled.nav`
-  /* max-width: 609px;
-    width: 100%; */
   ul {
     display: flex;
-    gap: 30px;
+    gap: 50px;
   }
 `;

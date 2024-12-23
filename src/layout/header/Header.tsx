@@ -11,10 +11,12 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify="space-between">
+        <FlexWrapper justify="space-between" align="center">
           <Logo />
+          <FlexWrapper justify="space-between" align="center" gap="50px">
           <Menu />
           <SocialLinks />
+          </FlexWrapper>
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -22,5 +24,10 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  /* min-height: 30vh; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  opacity: 0.7;
 `;

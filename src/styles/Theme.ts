@@ -5,6 +5,6 @@ export const theme = {
         mainSectionFont: "#D9D9D9",
         titleFont: "#CCCCCC",
         smallTextAndIconsFont: "#A7A7A7",
-        linkText: "#FFF"
+        linkText: "#FFFFFF"
     }
 }

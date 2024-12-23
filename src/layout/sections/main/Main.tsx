@@ -23,7 +23,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  /* min-height: 30vh; */
 `;
 
 const Photo = styled.img`
