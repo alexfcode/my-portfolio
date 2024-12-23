@@ -28,6 +28,11 @@ export const Main = () => {
     )
 }
 
+const StyledMain = styled.section`
+    min-height: 30vh;
+    background-color: #8ef185;
+`
+
 const Photo = styled.img`
     width: 350x;
     height: 350px;
@@ -36,8 +41,5 @@ const Photo = styled.img`
     border: 9px solid transparent;
     border-radius: 50%;
     object-fit: cover;
-`
-const StyledMain = styled.section`
-    background-color: #8ef185;
 `
 

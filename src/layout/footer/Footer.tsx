@@ -26,6 +26,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.section`
+  min-height: 30vh;
   background-color: #9cf785;
 `;
 
@@ -39,24 +40,5 @@ const Email = styled.span`
 
 const DesignedBy = styled.span`
     display: block;
-
-    color: var(--light-Content, #A7A7A7);
-text-align: center;
-font-family: Poppins;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px; /* 144.444% */
-
-background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-family: Poppins;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px;
-
 
 `
