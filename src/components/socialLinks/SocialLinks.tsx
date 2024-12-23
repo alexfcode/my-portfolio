@@ -31,9 +31,6 @@ const StyledSocialLinks = styled.div`
         display: flex;
         gap: 10px;
         align-items: center;
-        li {
-            list-style-type: none;
-        }
     }
     
 `

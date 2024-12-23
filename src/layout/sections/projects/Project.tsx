@@ -34,8 +34,8 @@ export const Project = (props: ProjectPropsType) => {
 }
 
 const StyledProject = styled.div`
-    min-width: 375px;
-    width: 31%;
+    max-width: 375px;
+    width: 100%;
     min-height: 567px;
     border-radius: 20px;
     background-color: #695e5e;

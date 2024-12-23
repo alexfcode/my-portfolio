@@ -31,8 +31,5 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     gap: 30px;
-    li {
-      list-style-type: none;
-    }
   }
 `;

@@ -2,6 +2,7 @@ import React from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import styled from "styled-components";
+import { Container } from "../../../components/Container";
 
 const skillsList = [
   {
@@ -93,36 +94,33 @@ const skillsList = [
 export const Skills = () => {
   return (
     <StyledSkills>
-      <FlexWrapper justify="space-between" direction="column" align="center">
-        <Title>My Tech Stack</Title>
-        <Text> Technologies I’ve been working with recently</Text>
-      <FlexWrapper align="center" wrap="wrap" gap="70px 0">
-        {skillsList.map((s, index) => {
-          return (
-            <Icon
-              iconId={s.iconId}
-              width={"16.66%"}
-              height={s.height}
-              viewBox={s.viewBox}
-              key={s.index}
-            />
-          );
-        })}
-      </FlexWrapper>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper justify="space-between" direction="column" align="center">
+          <Title>My Tech Stack</Title>
+          <Text> Technologies I’ve been working with recently</Text>
+          <FlexWrapper align="center" wrap="wrap" gap="70px 0">
+            {skillsList.map((s, index) => {
+              return (
+                <Icon
+                  iconId={s.iconId}
+                  width={"16.66%"}
+                  height={s.height}
+                  viewBox={s.viewBox}
+                  key={s.index}
+                />
+              );
+            })}
+          </FlexWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  min-height: 30vh;
-  background-color: #c55af0;
+  /* min-height: 30vh; */
 `;
 
-const Title = styled.h2`
-    
-`
+const Title = styled.h2``;
 
-const Text = styled.p`
-    
-`
+const Text = styled.p``;

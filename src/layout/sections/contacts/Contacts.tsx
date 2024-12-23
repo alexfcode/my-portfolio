@@ -1,27 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "../../../components/Container";
 
 export const Contacts = () => {
   return (
     <StyledContacts>
-      <FlexWrapper direction="column">
-        <Title>For any questions please mail me:</Title>
-        <Text>hi@pavanmg.in</Text>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper direction="column" justify="center" align="center">
+          <Title>For any questions please mail me:</Title>
+          <Text>hi@pavanmg.in</Text>
+        </FlexWrapper>
+      </Container>
     </StyledContacts>
   );
 };
 
 const StyledContacts = styled.section`
-  min-height: 30vh;
-  background-color: #eca381;
+  /* min-height: 30vh; */
 `;
 
-const Title = styled.h2`
-text-align: center;
+const Title = styled.h2``;
 
-`;
-const Text = styled.h5`
-text-align: center;
-`
+const Text = styled.h5``;
