@@ -3,17 +3,18 @@ import mainPhoto from "../../../assets/images/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <FlexWrapper direction="column">
-            <h2>Hi 👋,</h2>
-            <h2>My name is</h2>
-            <h2>Pavan MG</h2>
-            <h1>I build things for web</h1>
+          <FlexWrapper direction="column" justify="center">
+            <Text>Hi 👋,</Text>
+            <Text>My name is</Text>
+            <Name>Pavan MG</Name>
+            <Search>I build things for web</Search>
           </FlexWrapper>
           <Photo src={mainPhoto} alt="" />
         </FlexWrapper>
@@ -23,6 +24,8 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
+  min-height: 100vh;
+  display: flex;
 `;
 
 const Photo = styled.img`
@@ -34,3 +37,23 @@ const Photo = styled.img`
   border-radius: 50%;
   object-fit: cover;
 `;
+
+const Name = styled.h2`
+  color: ${theme.colors.mainSectionFont};
+font-size: 58px;
+
+background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+`
+
+const Text = styled.h2`
+  color: ${theme.colors.mainSectionFont};
+font-size: 58px;
+`
+
+const Search = styled.h1`
+  color: ${theme.colors.mainSectionFont};
+font-size: 58px;
+`

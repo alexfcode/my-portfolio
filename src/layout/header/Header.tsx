@@ -24,6 +24,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
+display: flex;
+  height: 150px;
   position: fixed;
   top: 0;
   left: 0;
