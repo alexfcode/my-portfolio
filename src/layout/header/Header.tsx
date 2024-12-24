@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/nav/Nav";
+import { Menu } from "../../components/nav/Menu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
@@ -24,8 +24,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-display: flex;
-  height: 150px;
+  display: flex;
+  min-height: 100px;
   position: fixed;
   top: 0;
   left: 0;

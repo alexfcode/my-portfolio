@@ -10,13 +10,15 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <FlexWrapper direction="column" justify="center">
-            <Text>Hi 👋,</Text>
-            <Text>My name is</Text>
+          <TextWrapper>
+            <Text>Hi 👋,<br/>My name is</Text>
             <Name>Pavan MG</Name>
             <Search>I build things for web</Search>
-          </FlexWrapper>
-          <Photo src={mainPhoto} alt="" />
+          </TextWrapper>
+          <PhotoWrapper>
+            <Photo src={mainPhoto} alt="" />
+          </PhotoWrapper>
+
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -24,9 +26,13 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
 `;
+
+const TextWrapper = styled.div`
+`;
+
 
 const Photo = styled.img`
   width: 350x;
@@ -37,6 +43,15 @@ const Photo = styled.img`
   border-radius: 50%;
   object-fit: cover;
 `;
+
+const PhotoWrapper = styled.div`
+  position: relative;
+
+  &::before {
+    content: "";
+    
+  }
+`
 
 const Name = styled.h2`
   color: ${theme.colors.mainSectionFont};

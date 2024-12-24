@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/logo/Logo";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
-import { Menu } from "../../components/nav/Nav";
+import { Menu } from "../../components/nav/Menu";
 import { Container } from "../../components/Container";
 
 export const Footer = () => {
@@ -30,7 +30,10 @@ export const Footer = () => {
   );
 };
 
-const StyledFooter = styled.footer``;
+const StyledFooter = styled.footer`
+padding-bottom: 60px;
+line-height: 120px;
+`;
 
 const PhoneNumber = styled.span`
   display: block;
@@ -42,4 +45,9 @@ const Email = styled.span`
 
 const DesignedBy = styled.span`
   display: block;
+  background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
 `;

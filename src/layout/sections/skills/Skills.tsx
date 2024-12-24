@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 const skillsList = [
   {
@@ -95,32 +96,51 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <FlexWrapper justify="space-between" direction="column" align="center">
-          <Title>My Tech Stack</Title>
-          <Text> Technologies I’ve been working with recently</Text>
-          <FlexWrapper align="center" wrap="wrap" gap="70px 0">
-            {skillsList.map((s, index) => {
-              return (
-                <Icon
-                  iconId={s.iconId}
-                  width={"16.66%"}
-                  height={s.height}
-                  viewBox={s.viewBox}
-                  key={s.index}
-                />
-              );
-            })}
-          </FlexWrapper>
-        </FlexWrapper>
+        <Title>My Tech Stack</Title>
+        <Text> Technologies I’ve been working with recently</Text>
+        <IconsWrapper>
+          {skillsList.map((s, index) => {
+            return (
+              <Icon
+                iconId={s.iconId}
+                width={"16.66%"}
+                height={s.height}
+                viewBox={s.viewBox}
+                key={s.index}
+              />
+            );
+          })
+          }
+        </IconsWrapper>
       </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  /* min-height: 30vh; */
+  display: flex;
+  min-height: 50vh;
+  padding-bottom: 200px;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+color: ${theme.colors.titleFont};
+font-size: 48px;
 
-const Text = styled.p``;
+text-align: center;
+margin-bottom: 40px;
+`;
+
+const Text = styled.p`
+color: ${theme.colors.mainSectionFont};
+font-size: 32px;
+
+text-align: center;
+margin-bottom: 140px;
+`;
+
+const IconsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 0;
+`

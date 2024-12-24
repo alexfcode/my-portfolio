@@ -1,24 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const Menu = () => {
   return (
     <StyledNav>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link href="#">Home</Link>
         </li>
         <li>
-          <a href="#">About</a>
+          <Link href="#">About</Link>
         </li>
         <li>
-          <a href="#">Tech Stack</a>
+          <Link href="#">Tech Stack</Link>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <Link href="#">Projects</Link>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <Link href="#">Contact</Link>
         </li>
       </ul>
     </StyledNav>
@@ -31,3 +32,7 @@ const StyledNav = styled.nav`
     gap: 50px;
   }
 `;
+
+const Link = styled.a`
+color: ${theme.colors.smallTextAndIconsFont}
+`
