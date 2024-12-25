@@ -86,5 +86,9 @@ const NoteContent = styled.span`
 const Link = styled.a`
     font-size: 16px;
     font-weight: 400;
-    color: ${theme.colors.linkText}
+    color: ${theme.colors.linkText};
+    transition: 0.2s;
+    &:hover {
+        scale: 1.3;
+    }
 `

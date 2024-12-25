@@ -32,10 +32,16 @@ const StyledSocialLinks = styled.div`
         display: flex;
         gap: 10px;
         align-items: center;
+        li{
+            transition: 0.2s;
+    &:hover {
+      transform: translateY(-4px);
+      
+    }
+  }
     }
     
 `
 
 const StyledLink = styled.a`
-    
 `

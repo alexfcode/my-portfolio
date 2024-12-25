@@ -33,6 +33,13 @@ display: flex;
   ul {
     display: flex;
     gap: 50px;
+
+  li {
+    transition: 0.2s;
+    &:hover {
+      scale: 1.3;
+    }
+  }
   }
 `;
 
