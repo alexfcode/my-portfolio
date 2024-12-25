@@ -1,38 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { Logo } from "../../components/logo/Logo";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { Menu } from "../../components/nav/Menu";
 import { Container } from "../../components/Container";
+import { FooterLogo } from "../../components/logo/FooterLogo";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify="space-between" align="center">
-          <Logo />
-          <FlexWrapper justify="space-between" align="center" gap="64px">
-            <PhoneNumber>+91 12345 09876</PhoneNumber>
-            <Email>info@example.com</Email>
-            <SocialLinks />
+        <FlexWrapper direction="column" gap="25px">
+          <FlexWrapper justify="space-between" align="flex-end">
+            <FooterLogo />
+            <FlexWrapper justify="space-between" align="center" gap="64px">
+              <PhoneNumber>+91 12345 09876</PhoneNumber>
+              <Email>info@example.com</Email>
+              <SocialLinks />
+            </FlexWrapper>
+          </FlexWrapper>
+          <hr />
+          <FlexWrapper justify="space-between" align="flex-end">
+            <Menu />
+            <DesignedBy>
+              Designed and built by Pavan MG with Love & Coffee
+            </DesignedBy>
           </FlexWrapper>
         </FlexWrapper>
-        <hr />
-        <FlexWrapper justify="space-between" align="center">
-          <Menu />
-          <DesignedBy>
-            Designed and built by Pavan MG with Love & Coffee
-          </DesignedBy>
-        </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </StyledFooter >
   );
 };
 
 const StyledFooter = styled.footer`
 padding-bottom: 60px;
-line-height: 120px;
+font-family: "DM Sans";
+font-size: 18px;
+font-weight: 400;
+line-height: 26px;
 `;
 
 const PhoneNumber = styled.span`
@@ -51,3 +56,4 @@ const DesignedBy = styled.span`
   -webkit-text-fill-color: transparent;
   font-size: 18px;
 `;
+

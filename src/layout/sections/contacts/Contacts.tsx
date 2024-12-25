@@ -22,12 +22,12 @@ padding-bottom: 205px;
 `;
 
 const Title = styled.h2`
-color: ${theme.colors.mainSectionFont};
 font-family: "DM Sans";
 font-size: 58px;
+font-weight: 700;
 `;
 
-const Text = styled.h5`
+const Text = styled.h3`
 font-family: "DM Sans";
 font-size: 58px;
 

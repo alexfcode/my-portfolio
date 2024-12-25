@@ -17,7 +17,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "1",
@@ -27,7 +27,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "2",
@@ -37,7 +37,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "3",
@@ -47,7 +47,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "4",
@@ -57,7 +57,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "5",
@@ -67,17 +67,7 @@ const projectsList = [
     title: "Project Tile goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
-    previewLink: "#",
-    codeLink: "#",
-    index: "6",
-  },
-  {
-    img: Photo6,
-    title: "Project Tile goes here",
-    content:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    note: "Tech stack : HTML , JavaScript, SASS, React",
+    note: "HTML , JavaScript, SASS, React",
     previewLink: "#",
     codeLink: "#",
     index: "6",
@@ -90,7 +80,7 @@ export const Projects = () => {
       <Container>
         {/* <FlexWrapper direction="column" justify="space-between"> */}
           <Title>Projects</Title>
-          <Text>Things I’ve built so far</Text>
+          <SubTitle>Things I’ve built so far</SubTitle>
           <FlexWrapper wrap="wrap" gap="65px 46px">
             {projectsList.map((p, index) => {
               return (
@@ -114,22 +104,20 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  min-height: 80vh;
   padding-bottom: 180px;
 `;
 
 const Title = styled.h2`
-text-align: center;
-color: ${theme.colors.titleFont};
 font-size: 48px;
-margin: 0 auto;
-margin-bottom: 40px;
+
+text-align: center;
+margin-bottom: 50px;
 `;
 
-const Text = styled.p`
-text-align: center;
-color: ${theme.colors.mainSectionFont};
+const SubTitle = styled.h3`
+color: ${theme.colors.secondaryFont};
 font-size: 32px;
-margin: 0 auto;
-margin-bottom: 140px;
+
+text-align: center;
+margin-bottom: 110px;
 `;

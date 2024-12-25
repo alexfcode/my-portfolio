@@ -27,6 +27,9 @@ export const Menu = () => {
 };
 
 const StyledNav = styled.nav`
+height: 100%;
+display: flex;
+  align-items: flex-start;
   ul {
     display: flex;
     gap: 50px;
@@ -34,5 +37,8 @@ const StyledNav = styled.nav`
 `;
 
 const Link = styled.a`
-color: ${theme.colors.smallTextAndIconsFont}
+font-family: "DM Sans";
+font-size: 20px;
+font-weight: 500;
+color: ${theme.colors.secondaryFont}
 `

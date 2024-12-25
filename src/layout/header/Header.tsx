@@ -14,8 +14,8 @@ export const Header = () => {
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <FlexWrapper justify="space-between" align="center" gap="50px">
-          <Menu />
-          <SocialLinks />
+            <Menu />
+            <SocialLinks />
           </FlexWrapper>
         </FlexWrapper>
       </Container>
@@ -25,11 +25,12 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   display: flex;
-  min-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   opacity: 0.7;
+  
+  padding: 36px 0;
 `;

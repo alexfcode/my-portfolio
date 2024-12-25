@@ -3,8 +3,9 @@ export const theme = {
         primaryBg: "#191919",
 
         mainSectionFont: "#D9D9D9",
-        titleFont: "#CCCCCC",
-        smallTextAndIconsFont: "#A7A7A7",
-        linkText: "#FFFFFF"
+        primeFont: "#CCCCCC",
+        secondaryFont: "#A7A7A7",
+        linkText: "#FFFFFF",
+        projectBg: "#363636",
     }
 }

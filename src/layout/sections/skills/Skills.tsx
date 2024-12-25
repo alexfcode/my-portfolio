@@ -97,8 +97,8 @@ export const Skills = () => {
     <StyledSkills>
       <Container>
         <Title>My Tech Stack</Title>
-        <Text> Technologies I’ve been working with recently</Text>
-        <IconsWrapper>
+        <SubTitle> Technologies I’ve been working with recently</SubTitle>
+        <FlexWrapper wrap="wrap" gap="70px 0">
           {skillsList.map((s, index) => {
             return (
               <Icon
@@ -111,36 +111,27 @@ export const Skills = () => {
             );
           })
           }
-        </IconsWrapper>
+        </FlexWrapper>
       </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  display: flex;
-  min-height: 50vh;
   padding-bottom: 200px;
 `;
 
 const Title = styled.h2`
-color: ${theme.colors.titleFont};
 font-size: 48px;
 
 text-align: center;
-margin-bottom: 40px;
+margin-bottom: 50px;
 `;
 
-const Text = styled.p`
-color: ${theme.colors.mainSectionFont};
+const SubTitle = styled.h3`
+color: ${theme.colors.secondaryFont};
 font-size: 32px;
 
 text-align: center;
 margin-bottom: 140px;
 `;
-
-const IconsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 70px 0;
-`

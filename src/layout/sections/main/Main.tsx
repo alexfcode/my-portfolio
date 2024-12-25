@@ -13,7 +13,7 @@ export const Main = () => {
           <TextWrapper>
             <Text>Hi 👋,<br/>My name is</Text>
             <Name>Pavan MG</Name>
-            <Search>I build things for web</Search>
+            <MainText>I build things for web</MainText>
           </TextWrapper>
           <PhotoWrapper>
             <Photo src={mainPhoto} alt="" />
@@ -26,7 +26,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
 `;
 
@@ -68,7 +68,7 @@ const Text = styled.h2`
 font-size: 58px;
 `
 
-const Search = styled.h1`
+const MainText = styled.h1`
   color: ${theme.colors.mainSectionFont};
 font-size: 58px;
 `

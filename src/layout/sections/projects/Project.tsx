@@ -22,15 +22,19 @@ export const Project = (props: ProjectPropsType) => {
             <TextWrapper>
                 <Title>{props.title}</Title>
                 <Content>{props.content}</Content>
-                <Note>{props.note}</Note>
-                <FlexWrapper justify='space-between'>
+                <NoteContent>{<NoteTitle>{'TECH STACK: '}</NoteTitle>}{props.note}</NoteContent>
+                <FlexWrapper justify='center' gap="48px">
                     <Link href={props.previewLink}>
-                        <Icon iconId='chain' width='20' height='20' viewBox='0 0 20 20' />
-                        Live Preview
+                        <FlexWrapper gap="10px">
+                            <Icon iconId='chain' width='20' height='20' viewBox='0 0 20 20' />
+                            Live Preview
+                        </FlexWrapper>
                     </Link>
                     <Link href={props.codeLink}>
-                        <Icon iconId='github2' width='20' height='20' viewBox='0 0 20 20' />
-                        View Code
+                        <FlexWrapper gap="10px">
+                            <Icon iconId='github2' width='20' height='20' viewBox='0 0 20 20' />
+                            View Code
+                        </FlexWrapper>
                     </Link>
                 </FlexWrapper>
             </TextWrapper>
@@ -42,7 +46,8 @@ const StyledProject = styled.div`
     max-width: 375px;
     min-height: 567px;
     border-radius: 20px;
-    background-color: #695e5e;
+    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
+    background-color: #363636;
     border: none;
 `
 
@@ -51,32 +56,35 @@ const Image = styled.img`
     height: 260px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
-
-    
 `
 const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px 30px;
     gap: 15px;
+
+    line-height: 26px;
 `
 
 const Title = styled.h3`
-    color: ${theme.colors.mainSectionFont};
     font-size: 28px;
     font-weight: 500;
 `
 const Content = styled.p`
-    color: ${theme.colors.mainSectionFont};
     font-size: 18px;
     font-weight: 300;
 `
-const Note = styled.span`
-    color: ${theme.colors.mainSectionFont};
+const NoteTitle = styled.span`
     font-size: 16px;
+    font-weight: 400;
+`
+const NoteContent = styled.span`
+    font-size: 14px;
     font-weight: 300;
 `
+
 const Link = styled.a`
     font-size: 16px;
     font-weight: 400;
+    color: ${theme.colors.linkText}
 `
