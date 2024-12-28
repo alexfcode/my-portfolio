@@ -1,7 +1,5 @@
-import React from "react";
 import styled from "styled-components";
 import { Project } from "../projects/Project";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import Photo1 from "../../../assets/images/projects/work1.webp";
 import Photo2 from "../../../assets/images/projects/work2.webp";
 import Photo3 from "../../../assets/images/projects/work3.webp";
@@ -10,6 +8,7 @@ import Photo5 from "../../../assets/images/projects/work5.webp";
 import Photo6 from "../../../assets/images/projects/work6.webp";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { GridWrapper } from "../../../components/GridWrapper";
 
 const projectsList = [
   {
@@ -78,11 +77,11 @@ export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        {/* <FlexWrapper direction="column" justify="space-between"> */}
-          <Title>Projects</Title>
-          <SubTitle>Things I’ve built so far</SubTitle>
-          <FlexWrapper wrap="wrap" gap="65px 46px">
-            {projectsList.map((p, index) => {
+        <Title>Projects</Title>
+        <SubTitle>Things I’ve built so far</SubTitle>
+
+        <GridWrapper>
+        {projectsList.map((p, index) => {
               return (
                 <Project
                   // index={p.index}
@@ -96,8 +95,7 @@ export const Projects = () => {
                 />
               );
             })}
-          </FlexWrapper>
-        {/* </FlexWrapper> */}
+        </GridWrapper>
       </Container>
     </StyledProjects>
   );
@@ -108,16 +106,18 @@ const StyledProjects = styled.section`
 `;
 
 const Title = styled.h2`
-font-size: 48px;
+  font-size: 48px;
 
-text-align: center;
-margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 `;
 
 const SubTitle = styled.h3`
-color: ${theme.colors.secondaryFont};
-font-size: 32px;
+  color: ${theme.colors.secondaryFont};
+  font-size: 32px;
 
-text-align: center;
-margin-bottom: 110px;
+  text-align: center;
+  margin-bottom: 110px;
 `;
+
+

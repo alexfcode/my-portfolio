@@ -1,10 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { Menu } from "../../components/nav/Menu";
 import { Container } from "../../components/Container";
 import { FooterLogo } from "../../components/logo/FooterLogo";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
@@ -15,7 +15,7 @@ export const Footer = () => {
             <FooterLogo />
             <FlexWrapper justify="space-between" align="center" gap="64px">
               <PhoneNumber>+91 12345 09876</PhoneNumber>
-              <Email>info@example.com</Email>
+              <Email>hi@pavanmg.in</Email>
               <SocialLinks />
             </FlexWrapper>
           </FlexWrapper>
@@ -23,7 +23,7 @@ export const Footer = () => {
           <FlexWrapper justify="space-between" align="flex-end">
             <Menu />
             <DesignedBy>
-              Designed and built by Pavan MG with Love & Coffee
+              <span>Designed and built by </span>Pavan MG <span>with</span> Love <span>&</span> Coffee
             </DesignedBy>
           </FlexWrapper>
         </FlexWrapper>
@@ -45,15 +45,23 @@ const PhoneNumber = styled.span`
 `;
 
 const Email = styled.span`
-  display: block;
+display: block;
+
+font-family: "DM Sans";
+
+background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
+background-clip: text;
+-webkit-text-fill-color: transparent;
 `;
 
 const DesignedBy = styled.span`
   display: block;
   background: var(--Gradient-Heading, linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%));
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 18px;
+  span {
+    -webkit-text-fill-color: ${theme.colors.primeFont};
+  }
 `;
 

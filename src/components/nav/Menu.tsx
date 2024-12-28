@@ -37,7 +37,7 @@ display: flex;
   li {
     transition: 0.2s;
     &:hover {
-      scale: 1.3;
+      scale: 1.2;
     }
   }
   }
