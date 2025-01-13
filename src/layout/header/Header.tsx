@@ -4,6 +4,7 @@ import { Menu } from "../../components/nav/Menu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
+import { MobileMenu } from "../../components/nav/MobileMenu";
 
 export const Header = () => {
   return (
@@ -13,6 +14,7 @@ export const Header = () => {
           <Logo />
           <FlexWrapper justify="space-between" align="center" gap="50px">
             <Menu />
+            <MobileMenu />
             <SocialLinks />
           </FlexWrapper>
         </FlexWrapper>

@@ -1,3 +1,4 @@
+import { theme } from '../../styles/Theme'
 import { Icon } from '../icon/Icon'
 import styled from 'styled-components'
 
@@ -37,6 +38,10 @@ const StyledSocialLinks = styled.div`
       
     }
   }
+    }
+
+    @media ${theme.media.tablet} {
+      display: none;
     }
     
 `

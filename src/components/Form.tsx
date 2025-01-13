@@ -32,7 +32,7 @@ const Input = styled.input`
   border: 1px solid ${theme.colors.borderColor};
   background: #252527;
   padding: 7px 15px;
-  
+
   font-family: "DM Sans";
   font-size: 20px;
   font-weight: 500;
@@ -45,9 +45,7 @@ const Input = styled.input`
 
   &:focus-visible {
     outline: 1px solid ${theme.colors.borderColor};
-}
-
-  
+  }
 `;
 
 const Button = styled.button`
