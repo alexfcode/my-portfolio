@@ -7,5 +7,9 @@ export const theme = {
         secondaryFont: "#A7A7A7",
         linkText: "#FFFFFF",
         projectBg: "#363636",
+
+        borderColor: "#4a4a4a",
+
+        placeholderColor: "#495057",
     }
 }

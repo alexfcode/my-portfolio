@@ -1,42 +1,65 @@
 import styled from "styled-components";
-import { FlexWrapper } from "./FlexWrapper";
 import { theme } from "../styles/Theme";
 
 export const Form = () => {
   return (
     <StyledForm>
-      <FlexWrapper direction="column" gap="24px" justify="center" align="canter">
-        <Input></Input>
-        <Input></Input>
-        <Input></Input>
-        <Button>SEND MESSAGE</Button>
-      </FlexWrapper>
+      <Input placeholder={"Name"}></Input>
+      <Input placeholder={"Subject"}></Input>
+      <Input as={"textarea"} placeholder={"Message"}></Input>
+      <Button type={"submit"}>SEND MESSAGE</Button>
     </StyledForm>
   );
 };
 
+const StyledForm = styled.form`
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+
+  textarea {
+    resize: none;
+    height: 155px;
+  }
+`;
+
 const Input = styled.input`
-  width: 540px;
-  height: 32px;
-  border: 1px solid #4A4A4A;
-background: #252527;
+  width: 100%;
+  border: 1px solid ${theme.colors.borderColor};
+  background: #252527;
+  padding: 7px 15px;
+  
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-weight: 500;
+  color: ${theme.colors.secondaryFont};
+
+  &::placeholder {
+    color: ${theme.colors.placeholderColor};
+    text-transform: capitalize;
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${theme.colors.borderColor};
+}
+
+  
 `;
 
 const Button = styled.button`
   min-width: 112px;
   color: ${theme.colors.primeFont};
-  padding: 24px 0;
   transition: 0.2s;
-    &:hover {
-      scale: 1.2;
-    }
-
+  &:hover {
+    scale: 1.2;
+  }
 
   font-family: "DM Sans";
-font-size: 20px;
-font-weight: 500;
-color: ${theme.colors.secondaryFont}
-`;
-
-const StyledForm = styled.form`
+  font-size: 20px;
+  font-weight: 500;
+  color: ${theme.colors.secondaryFont};
 `;
