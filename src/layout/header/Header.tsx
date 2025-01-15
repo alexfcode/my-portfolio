@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/nav/Menu";
+import { DesktopMenu } from "../../components/nav/DesktopMenu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
@@ -13,7 +13,7 @@ export const Header = () => {
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <FlexWrapper justify="space-between" align="center" gap="50px">
-            <Menu />
+            <DesktopMenu />
             <MobileMenu />
             <SocialLinks />
           </FlexWrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
-import { Menu } from "../../components/nav/Menu";
+import { DesktopMenu } from "../../components/nav/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FooterLogo } from "../../components/logo/FooterLogo";
 import { theme } from "../../styles/Theme";
@@ -21,7 +21,7 @@ export const Footer = () => {
           </FlexWrapper>
           <hr />
           <FlexWrapper justify="space-between" align="flex-end">
-            <Menu />
+            <DesktopMenu />
             <DesignedBy>
               <span>Designed and built by </span>Pavan MG <span>with</span> Love <span>&</span> Coffee
             </DesignedBy>
