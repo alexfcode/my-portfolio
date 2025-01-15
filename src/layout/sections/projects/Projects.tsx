@@ -102,8 +102,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  padding-bottom: 180px;
-`;
+  `;
 
 const Title = styled.h2`
   font-size: 48px;

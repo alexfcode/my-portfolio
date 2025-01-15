@@ -24,6 +24,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
+padding-top: 36px;
+
   display: flex;
   position: fixed;
   top: 0;
@@ -32,5 +34,5 @@ const StyledHeader = styled.header`
   z-index: 9999;
   opacity: 0.7;
   
-  padding: 36px 0;
+  /* padding: 36px 0; */
 `;

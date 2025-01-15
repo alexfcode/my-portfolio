@@ -10,7 +10,7 @@ type BurgerButtonPropsType = {
 export const BurgerButton = (props: BurgerButtonPropsType) => {
   return (
     <StyledBurgerButton>
-      <div>{props.isOpen ? <AiOutlineMenu /> : <AiOutlineClose />}</div>
+      <div>{props.isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}</div>
     </StyledBurgerButton>
   );
 };

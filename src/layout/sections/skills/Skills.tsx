@@ -117,8 +117,7 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  padding-bottom: 200px;
-`;
+  `;
 
 const Title = styled.h2`
 font-size: 48px;
