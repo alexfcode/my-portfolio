@@ -4,8 +4,8 @@ import { Icon } from '../icon/Icon'
 
 export const FooterLogo = () => {
     return (
-        <StyledFooterLogo href="#">
+        <a href="#">
             <Icon iconId="logoFooter" width="97" height="59" viewBox='0 0 97 59'/>
-        </StyledFooterLogo>
+        </a>
     )
 }
