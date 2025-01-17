@@ -9,6 +9,7 @@ import Photo6 from "../../../assets/images/projects/work6.webp";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { GridWrapper } from "../../../components/GridWrapper";
+import { font } from "../../../styles/Common";
 
 const projectsList = [
   {
@@ -105,18 +106,37 @@ const StyledProjects = styled.section`
   `;
 
 const Title = styled.h2`
-  font-size: 48px;
+
+${font({
+    color: "${theme.colors.mainSectionFont}",
+    weight: 700,
+    Fmax: 48,
+    Fmin: 27,
+  })};
 
   text-align: center;
   margin-bottom: 50px;
+
+  @media ${theme.media.mobile} {
+  margin-bottom: 20px;
+}
 `;
 
 const SubTitle = styled.h3`
-  color: ${theme.colors.secondaryFont};
-  font-size: 32px;
+
+${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 400,
+    Fmax: 32,
+    Fmin: 20,
+  })};
 
   text-align: center;
   margin-bottom: 110px;
+
+  @media ${theme.media.mobile} {
+  margin-bottom: 80px;
+}
 `;
 
 

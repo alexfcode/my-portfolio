@@ -3,6 +3,7 @@ import { Icon } from "../../../components/icon/Icon";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 const skillsList = [
   {
@@ -97,7 +98,7 @@ export const Skills = () => {
       <Container>
         <Title>My Tech Stack</Title>
         <SubTitle> Technologies I’ve been working with recently</SubTitle>
-        <FlexWrapper wrap="wrap" gap="70px 0">
+        <FlexWrapper wrap="wrap" gap="50px 0">
           {skillsList.map((s, index) => {
             return (
               <Icon
@@ -120,16 +121,35 @@ const StyledSkills = styled.section`
   `;
 
 const Title = styled.h2`
-font-size: 48px;
+
+${font({
+    color: "${theme.colors.mainSectionFont}",
+    weight: 700,
+    Fmax: 48,
+    Fmin: 27,
+  })};
 
 text-align: center;
 margin-bottom: 50px;
+
+@media ${theme.media.mobile} {
+  margin-bottom: 20px;
+}
 `;
 
 const SubTitle = styled.h3`
-color: ${theme.colors.secondaryFont};
-font-size: 32px;
+
+${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 400,
+    Fmax: 32,
+    Fmin: 20,
+  })};
 
 text-align: center;
-margin-bottom: 140px;
+margin-bottom: 120px;
+
+@media ${theme.media.mobile} {
+  margin-bottom: 80px;
+}
 `;
