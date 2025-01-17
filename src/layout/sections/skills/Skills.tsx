@@ -138,13 +138,8 @@ margin-bottom: 50px;
 `;
 
 const SubTitle = styled.h3`
-
-${font({
-    color: "${theme.colors.secondaryFont}",
-    weight: 400,
-    Fmax: 32,
-    Fmin: 24,
-  })};
+color: ${theme.colors.secondaryFont};
+font-size: 32px;
 
 text-align: center;
 margin-bottom: 120px;

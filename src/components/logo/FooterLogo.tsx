@@ -1,8 +1,6 @@
 import React from 'react'
 import LogoImg from "../../assets/images/logo.png"
 import { Icon } from '../icon/Icon'
-import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
 
 export const FooterLogo = () => {
     return (
@@ -11,9 +9,3 @@ export const FooterLogo = () => {
         </StyledFooterLogo>
     )
 }
-
-const StyledFooterLogo = styled.a`
-    display: block;
-
-
-`
