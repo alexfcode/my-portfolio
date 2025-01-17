@@ -9,11 +9,12 @@ import Photo6 from "../../../assets/images/projects/work6.webp";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { GridWrapper } from "../../../components/GridWrapper";
+import { font } from "../../../styles/Common";
 
 const projectsList = [
   {
     img: Photo1,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -23,7 +24,7 @@ const projectsList = [
   },
   {
     img: Photo2,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -33,7 +34,7 @@ const projectsList = [
   },
   {
     img: Photo3,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -43,7 +44,7 @@ const projectsList = [
   },
   {
     img: Photo4,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -53,7 +54,7 @@ const projectsList = [
   },
   {
     img: Photo5,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -63,7 +64,7 @@ const projectsList = [
   },
   {
     img: Photo6,
-    title: "Project Tile goes here",
+    title: "Project Title goes here",
     content:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     note: "HTML , JavaScript, SASS, React",
@@ -105,18 +106,37 @@ const StyledProjects = styled.section`
   `;
 
 const Title = styled.h2`
-  font-size: 48px;
+
+${font({
+    color: "${theme.colors.mainSectionFont}",
+    weight: 700,
+    Fmax: 48,
+    Fmin: 27,
+  })};
 
   text-align: center;
   margin-bottom: 50px;
+
+  @media ${theme.media.mobile} {
+  margin-bottom: 20px;
+}
 `;
 
 const SubTitle = styled.h3`
-  color: ${theme.colors.secondaryFont};
-  font-size: 32px;
+
+${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 400,
+    Fmax: 32,
+    Fmin: 24,
+  })};
 
   text-align: center;
   margin-bottom: 110px;
+
+  @media ${theme.media.mobile} {
+  margin-bottom: 80px;
+}
 `;
 
 

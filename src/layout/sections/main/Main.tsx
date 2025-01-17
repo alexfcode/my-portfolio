@@ -2,14 +2,14 @@ import mainPhoto from "../../../assets/images/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-between" align="center" wrap="wrap">
+        <FlexWrapper justify="space-around" align="center" wrap="wrap">
           <TextWrapper>
             <Text>
               Hi 👋,
@@ -43,6 +43,11 @@ const Photo = styled.img`
   border: 9px solid transparent;
   border-radius: 50%;
   object-fit: cover;
+
+  @media ${theme.media.mobile} {
+    width: 320x;
+    height: 320px;
+  }
 `;
 
 const PhotoWrapper = styled.div`
@@ -71,6 +76,10 @@ const Name = styled.h2`
 
 white-space: nowrap;
 
+@media ${theme.media.tablet} {
+  margin: 20px 0;
+}
+
 `;
 
 const Text = styled.h2`
@@ -90,6 +99,4 @@ const MainText = styled.h1`
     Fmax: 58,
     Fmin: 36,
   })};
-  white-space: nowrap;
-
 `;

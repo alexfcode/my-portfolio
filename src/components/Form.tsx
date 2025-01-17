@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const Form = () => {
   return (
@@ -34,9 +35,12 @@ const Input = styled.input`
   padding: 7px 15px;
 
   font-family: "DM Sans";
-  font-size: 20px;
-  font-weight: 500;
-  color: ${theme.colors.secondaryFont};
+  ${font({
+    color: "${theme.colors.secondaryFont}",
+      weight: 500,
+      Fmax: 20,
+      Fmin: 18,
+    })};
 
   &::placeholder {
     color: ${theme.colors.placeholderColor};
@@ -57,7 +61,12 @@ const Button = styled.button`
   }
 
   font-family: "DM Sans";
-  font-size: 20px;
-  font-weight: 500;
-  color: ${theme.colors.secondaryFont};
+
+    ${font({
+      color: "${theme.colors.secondaryFont}",
+      weight: 500,
+      Fmax: 20,
+      Fmin: 18,
+    })};
+
 `;

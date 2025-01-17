@@ -1,11 +1,19 @@
 import React from 'react'
 import LogoImg from "../../assets/images/logo.png"
 import { Icon } from '../icon/Icon'
+import styled from 'styled-components'
+import { theme } from '../../styles/Theme'
 
 export const FooterLogo = () => {
     return (
-        <a href="#">
+        <StyledFooterLogo href="#">
             <Icon iconId="logoFooter" width="97" height="59" viewBox='0 0 97 59'/>
-        </a>
+        </StyledFooterLogo>
     )
 }
+
+const StyledFooterLogo = styled.a`
+    display: block;
+
+
+`

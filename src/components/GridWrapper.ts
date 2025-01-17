@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../styles/Theme'
 
 export const GridWrapper = styled.div`
     display: grid;
@@ -7,4 +8,8 @@ export const GridWrapper = styled.div`
     row-gap: 65px;
     column-gap: 46px;
     justify-items: center;
+
+@media ${theme.media.mobile} {
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+}
 `

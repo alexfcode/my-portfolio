@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.primeFont};
+  min-width: 360px;
 }
 
  a {
@@ -44,5 +45,6 @@ section {
   }
     border: 1px solid white;
 }
+
 
 `;
