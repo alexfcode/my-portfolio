@@ -1,14 +1,14 @@
-import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { DesktopMenu } from "../../components/nav/DesktopMenu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
 import { MobileMenu } from "../../components/nav/MobileMenu";
+import { S } from "./Header_Styles";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
           <Logo />
@@ -19,20 +19,6 @@ export const Header = () => {
           </FlexWrapper>
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-padding-top: 36px;
-
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  opacity: 0.7;
-  
-  /* padding: 36px 0; */
-`;
