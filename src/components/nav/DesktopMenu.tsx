@@ -1,27 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
+import { Menu } from "../../layout/header/menu/Menu";
 
-export const DesktopMenu = () => {
+export const DesktopMenu: React.FC = () => {
   return (
     <StyledNav>
-      <ul>
-        <li>
-          <Link href="#">Home</Link>
-        </li>
-        <li>
-          <Link href="#">About</Link>
-        </li>
-        <li>
-          <Link href="#">Tech Stack</Link>
-        </li>
-        <li>
-          <Link href="#">Projects</Link>
-        </li>
-        <li>
-          <Link href="#">Contact</Link>
-        </li>
-      </ul>
+      <Menu />
     </StyledNav>
   );
 };
@@ -44,11 +28,4 @@ const StyledNav = styled.nav`
   @media ${theme.media.tablet} {
     display: none;
   }
-`;
-
-const Link = styled.a`
-  font-family: "DM Sans";
-  font-size: 20px;
-  font-weight: 500;
-  color: ${theme.colors.secondaryFont};
 `;

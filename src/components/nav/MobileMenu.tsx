@@ -1,30 +1,14 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../styles/Theme";
 import { BurgerButton } from "./BurgerButton";
+import { Menu } from "../../layout/header/menu/Menu";
 
-export const MobileMenu = () => {
+export const MobileMenu: React.FC = () => {
   return (
     <StyledMobileNav>
-      <BurgerButton isOpen={false} />
-      <MobileMenuPopup isOpen={false}>
-        <ul>
-          <li>
-            <Link href="#">Home</Link>
-          </li>
-          <li>
-            <Link href="#">About</Link>
-          </li>
-          <li>
-            <Link href="#">Tech Stack</Link>
-          </li>
-          <li>
-            <Link href="#">Projects</Link>
-          </li>
-          <li>
-            <Link href="#">Contact</Link>
-          </li>
-        </ul>
+      <BurgerButton isOpen={true} />
+      <MobileMenuPopup isOpen={true}>
+        <Menu />
       </MobileMenuPopup>
     </StyledMobileNav>
   );
