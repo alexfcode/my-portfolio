@@ -72,7 +72,7 @@ const projectsList = [
   },
 ];
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
     <S.Projects>
       <Container>

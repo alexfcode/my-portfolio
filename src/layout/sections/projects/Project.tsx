@@ -11,7 +11,7 @@ type ProjectPropsType = {
   codeLink: string;
 };
 
-export const Project = (props: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
   return (
     <S.Project>
       <S.Image src={props.img} alt="Photo1" />

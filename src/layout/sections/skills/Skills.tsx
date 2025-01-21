@@ -90,7 +90,7 @@ const skillsList = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <S.Skills>
       <Container>

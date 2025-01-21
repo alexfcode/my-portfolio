@@ -1,35 +1,14 @@
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { Form } from "../../../components/Form";
-import { font } from "../../../styles/Common";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Contacts_Styles";
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
   return (
-    <StyledContacts>
+    <S.Contacts>
       <Container>
-        <Title>For any questions please contact me:</Title>
+        <S.Title>For any questions please contact me:</S.Title>
         <Form />
       </Container>
-    </StyledContacts>
+    </S.Contacts>
   );
 };
-
-const StyledContacts = styled.section``;
-
-const Title = styled.h2`
-  ${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 48,
-    Fmin: 27,
-  })};
-
-  text-align: center;
-  margin-bottom: 100px;
-
-  @media ${theme.media.mobile} {
-    margin-bottom: 50px;
-  }
-`;
