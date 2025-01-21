@@ -1,9 +1,7 @@
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
-import { font } from "../../../styles/Common";
+import { S } from "./Skills_Styles";
 
 const skillsList = [
   {
@@ -94,10 +92,10 @@ const skillsList = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
-        <Title>My Tech Stack</Title>
-        <SubTitle> Technologies I’ve been working with recently</SubTitle>
+        <S.Title>My Tech Stack</S.Title>
+        <S.SubTitle> Technologies I’ve been working with recently</S.SubTitle>
         <FlexWrapper wrap="wrap" gap="50px 0">
           {skillsList.map((s, index) => {
             return (
@@ -109,47 +107,9 @@ export const Skills = () => {
                 key={s.index}
               />
             );
-          })
-          }
+          })}
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section`
-  `;
-
-const Title = styled.h2`
-
-${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 48,
-    Fmin: 32,
-  })};
-
-text-align: center;
-margin-bottom: 50px;
-
-@media ${theme.media.mobile} {
-  margin-bottom: 20px;
-}
-`;
-
-const SubTitle = styled.h3`
-
-${font({
-    color: "${theme.colors.secondaryFont}",
-    weight: 700,
-    Fmax: 32,
-    Fmin: 24,
-  })};
-
-text-align: center;
-margin-bottom: 100px;
-
-@media ${theme.media.mobile} {
-  margin-bottom: 50px;
-}
-`;
