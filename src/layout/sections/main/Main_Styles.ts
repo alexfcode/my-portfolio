@@ -11,7 +11,8 @@ const MainWrapper = styled.div`
 
   @media ${theme.media.tablet} {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 100px;
   }
 `;
@@ -21,14 +22,7 @@ const Main = styled.section`
   display: flex;
 `;
 
-const TextWrapper = styled.div`
-  justify-content: center;
-
-  @media ${theme.media.tablet} {
-    flex: 1;
-    justify-content: flex-start;
-  }
-`;
+const TextWrapper = styled.div``;
 
 const PhotoWrapper = styled.div`
   position: relative;
