@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Project } from "../projects/Project";
 import Photo1 from "../../../assets/images/projects/work1.webp";
 import Photo2 from "../../../assets/images/projects/work2.webp";
@@ -7,9 +6,8 @@ import Photo4 from "../../../assets/images/projects/work4.webp";
 import Photo5 from "../../../assets/images/projects/work5.webp";
 import Photo6 from "../../../assets/images/projects/work6.webp";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
 import { GridWrapper } from "../../../components/GridWrapper";
-import { font } from "../../../styles/Common";
+import { S } from "./Project_Styles";
 
 const projectsList = [
   {
@@ -76,11 +74,10 @@ const projectsList = [
 
 export const Projects = () => {
   return (
-    <StyledProjects>
+    <S.Projects>
       <Container>
-        <Title>Projects</Title>
-        <SubTitle>Things I’ve built so far</SubTitle>
-
+        <S.Title>Projects</S.Title>
+        <S.SubTitle>Things I’ve built so far</S.SubTitle>
         <GridWrapper>
           {projectsList.map((p, index) => {
             return (
@@ -98,40 +95,6 @@ export const Projects = () => {
           })}
         </GridWrapper>
       </Container>
-    </StyledProjects>
+    </S.Projects>
   );
 };
-
-const StyledProjects = styled.section``;
-
-const Title = styled.h2`
-  ${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 48,
-    Fmin: 32,
-  })};
-
-  text-align: center;
-  margin-bottom: 50px;
-
-  @media ${theme.media.mobile} {
-    margin-bottom: 20px;
-  }
-`;
-
-const SubTitle = styled.h3`
-  ${font({
-    color: "${theme.colors.secondaryFont}",
-    weight: 700,
-    Fmax: 32,
-    Fmin: 24,
-  })};
-
-  text-align: center;
-  margin-bottom: 100px;
-
-  @media ${theme.media.mobile} {
-    margin-bottom: 50px;
-  }
-`;
