@@ -48,7 +48,7 @@ const Photo = styled.img`
 
 const Name = styled.h2`
   ${font({
-    color: "${theme.colors.mainSectionFont}",
+    color: `${theme.colors.mainSectionFont}`,
     weight: 700,
     Fmax: 58,
     Fmin: 36,
@@ -71,7 +71,7 @@ const Name = styled.h2`
 
 const Text = styled.h2`
   ${font({
-    color: "${theme.colors.mainSectionFont}",
+    color: `${theme.colors.mainSectionFont}`,
     weight: 700,
     Fmax: 58,
     Fmin: 36,
@@ -81,7 +81,7 @@ const Text = styled.h2`
 
 const MainText = styled.h1`
   ${font({
-    color: "${theme.colors.mainSectionFont}",
+    color: `${theme.colors.mainSectionFont}`,
     weight: 700,
     Fmax: 58,
     Fmin: 36,

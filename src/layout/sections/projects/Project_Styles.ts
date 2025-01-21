@@ -69,12 +69,11 @@ text-align: justify;
 
 const ProjectLink = styled.a`
   ${font({
-    color: "${theme.colors.linkText}",
+    color: `${theme.colors.linkText}`,
     weight: 400,
     Fmax: 16,
     Fmin: 13,
   })};
-  color: ${theme.colors.linkText};
   transition: 0.2s;
   &:hover {
     scale: 1.2;

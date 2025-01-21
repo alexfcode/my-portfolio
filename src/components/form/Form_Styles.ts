@@ -25,7 +25,7 @@ const Input = styled.input`
 
   font-family: "DM Sans";
   ${font({
-    color: "${theme.colors.secondaryFont}",
+    color: `${theme.colors.secondaryFont}`,
     weight: 500,
     Fmax: 20,
     Fmin: 18,
@@ -53,7 +53,7 @@ const Button = styled.button`
   font-family: "DM Sans";
 
   ${font({
-    color: "${theme.colors.secondaryFont}",
+    color: `${theme.colors.secondaryFont}`,
     weight: 500,
     Fmax: 20,
     Fmin: 16,

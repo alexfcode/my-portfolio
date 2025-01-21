@@ -27,7 +27,7 @@ export const font = ({
 
 export const Title = styled.h2`
   ${font({
-    color: "${theme.colors.mainSectionFont}",
+    color: `${theme.colors.mainSectionFont}`,
     weight: 700,
     Fmax: 48,
     Fmin: 32,
@@ -43,7 +43,7 @@ export const Title = styled.h2`
 
 export const SubTitle = styled.h3`
   ${font({
-    color: "${theme.colors.secondaryFont}",
+    color: `${theme.colors.secondaryFont}`,
     weight: 700,
     Fmax: 32,
     Fmin: 24,
