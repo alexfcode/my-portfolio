@@ -24,5 +24,3 @@ export const Main: React.FC = () => {
     </S.Main>
   );
 };
-
-
