@@ -1,115 +1,28 @@
 import mainPhoto from "../../../assets/images/photo.webp";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
-import { font } from "../../../styles/Common";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Main_Styles";
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <Container>
-        <MainWrapper>
-          <TextWrapper>
-            <Text>
+        <S.MainWrapper>
+          <S.TextWrapper>
+            <S.Text>
               Hi 👋,
               <br />
               My name is
-            </Text>
-            <Name>Pavan MG</Name>
-            <MainText>I build things for web</MainText>
-          </TextWrapper>
-          <PhotoWrapper>
-            <Photo src={mainPhoto} alt="" />
-          </PhotoWrapper>
-        </MainWrapper>
+            </S.Text>
+            <S.Name>Pavan MG</S.Name>
+            <S.MainText>I build things for web</S.MainText>
+          </S.TextWrapper>
+          <S.PhotoWrapper>
+            <S.Photo src={mainPhoto} alt="" />
+          </S.PhotoWrapper>
+        </S.MainWrapper>
       </Container>
-    </StyledMain>
+    </S.Main>
   );
 };
 
-const MainWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
 
-  @media ${theme.media.tablet} {
-    flex-direction: column;
-    justify-content: center;
-    gap: 100px;
-  }
-`;
-
-const StyledMain = styled.section`
-  min-height: 100vh;
-  display: flex;
-`;
-
-const TextWrapper = styled.div``;
-
-const Photo = styled.img`
-  width: 350x;
-  height: 350px;
-  background: linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(#e70faa, #00c0fd) border-box;
-  border: 9px solid transparent;
-  border-radius: 50%;
-  object-fit: cover;
-
-  @media ${theme.media.mobile} {
-    width: 320x;
-    height: 320px;
-  }
-`;
-
-const PhotoWrapper = styled.div`
-  position: relative;
-
-  &::before {
-    content: "";
-  }
-`;
-
-const Name = styled.h2`
-  ${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 58,
-    Fmin: 36,
-  })};
-
-  background: var(
-    --Gradient-Heading,
-    linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  white-space: nowrap;
-
-  @media ${theme.media.tablet} {
-    margin: 20px 0;
-  }
-`;
-
-const Text = styled.h2`
-  ${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 58,
-    Fmin: 36,
-  })};
-  white-space: nowrap;
-`;
-
-const MainText = styled.h1`
-  ${font({
-    color: "${theme.colors.mainSectionFont}",
-    weight: 700,
-    Fmax: 58,
-    Fmin: 36,
-  })};
-`;

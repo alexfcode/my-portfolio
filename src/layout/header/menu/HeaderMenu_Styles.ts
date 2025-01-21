@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
 
+// Desktop Menu
+
 const Link = styled.a`
   font-family: "DM Sans";
   font-size: 20px;
@@ -25,8 +27,9 @@ const Nav = styled.nav`
   }
 `;
 
-const MobileNav = styled.nav`
-`;
+// Mobile Menu
+
+const MobileNav = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -81,7 +84,6 @@ const BurgerButton = styled.button`
     bottom: 50px;
   }
 `;
-
 
 export const S = {
   Link,

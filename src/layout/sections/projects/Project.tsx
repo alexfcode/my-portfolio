@@ -114,7 +114,7 @@ ${font({
   color: ${theme.colors.linkText};
   transition: 0.2s;
   &:hover {
-    scale: 1.3;
+    scale: 1.2;
   }
   white-space: nowrap;
 `;

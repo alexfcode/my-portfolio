@@ -24,7 +24,6 @@ const items = [
   },
 ];
 
-
 export const Menu: React.FC = () => {
   return (
     <ul>
@@ -38,5 +37,3 @@ export const Menu: React.FC = () => {
     </ul>
   );
 };
-
-

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Header = styled.header`
-padding-top: 36px;
+  padding-top: 36px;
 
   display: flex;
   position: fixed;
@@ -10,10 +10,8 @@ padding-top: 36px;
   right: 0;
   z-index: 9999;
   opacity: 0.7;
-  
-  /* padding: 36px 0; */
 `;
 
-export const S ={
-    Header,
-}
+export const S = {
+  Header,
+};
