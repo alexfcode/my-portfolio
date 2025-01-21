@@ -6,8 +6,6 @@ import { theme } from "../../../styles/Theme";
 
 const Projects = styled.section``;
 
-
-
 //PROJECT
 
 const Project = styled.div`
@@ -38,7 +36,7 @@ const ProjectTitle = styled.h3`
   ${font({
     weight: 500,
     Fmax: 28,
-    Fmin: 24,
+    Fmin: 22,
   })};
 
   text-align: center;
@@ -47,14 +45,16 @@ const ProjectContent = styled.p`
   ${font({
     weight: 300,
     Fmax: 18,
-    Fmin: 16,
+    Fmin: 14,
   })};
+
+  text-align: justify;
 `;
 const NoteTitle = styled.span`
   ${font({
     weight: 400,
     Fmax: 16,
-    Fmin: 14,
+    Fmin: 13,
   })};
 `;
 const NoteContent = styled.span`
@@ -63,6 +63,8 @@ const NoteContent = styled.span`
     Fmax: 14,
     Fmin: 12,
   })};
+
+text-align: justify;
 `;
 
 const ProjectLink = styled.a`
@@ -70,7 +72,7 @@ const ProjectLink = styled.a`
     color: "${theme.colors.linkText}",
     weight: 400,
     Fmax: 16,
-    Fmin: 14,
+    Fmin: 13,
   })};
   color: ${theme.colors.linkText};
   transition: 0.2s;
