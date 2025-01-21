@@ -25,6 +25,13 @@ const Nav = styled.nav`
       }
     }
   }
+
+  @media ${theme.media.tablet}
+
+  {
+    display: none;
+  }
+
 `;
 
 // Mobile Menu
@@ -37,8 +44,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 99999;
-  background-color: #3b3838f6;
+  z-index: 9999;
+  background-color:rgb(0, 0, 0);
 
   display: none;
 

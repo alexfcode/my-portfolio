@@ -4,7 +4,7 @@ import { font } from "../../../styles/Common";
 
 const MainWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
@@ -21,7 +21,14 @@ const Main = styled.section`
   display: flex;
 `;
 
-const TextWrapper = styled.div``;
+const TextWrapper = styled.div`
+  justify-content: center;
+
+  @media ${theme.media.tablet} {
+    flex: 1;
+    justify-content: flex-start;
+  }
+`;
 
 const PhotoWrapper = styled.div`
   position: relative;
@@ -76,7 +83,6 @@ const Text = styled.h2`
     Fmax: 58,
     Fmin: 36,
   })};
-  white-space: nowrap;
 `;
 
 const MainText = styled.h1`
@@ -86,6 +92,10 @@ const MainText = styled.h1`
     Fmax: 58,
     Fmin: 36,
   })};
+
+  p {
+    display: none;
+  }
 `;
 
 export const S = {
