@@ -20,6 +20,7 @@ const MainWrapper = styled.div`
 const Main = styled.section`
   min-height: 100vh;
   display: flex;
+  padding-top: 100px;
 `;
 
 const TextWrapper = styled.div``;
