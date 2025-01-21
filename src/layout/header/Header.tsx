@@ -1,20 +1,30 @@
-import { Logo } from "../../components/logo/Logo";
-import { DesktopMenu } from "../../components/nav/DesktopMenu";
+import { Logo } from "../../components/logo/HeaderLogo";
+import { DesktopMenu } from "./menu/DesktopMenu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Container } from "../../components/Container";
-import { MobileMenu } from "../../components/nav/MobileMenu";
+import { MobileMenu } from "./menu/MobileMenu";
 import { S } from "./Header_Styles";
+import React from "react";
 
 export const Header: React.FC = () => {
+
+const [width, setWidth] = React.useState(window.innerWidth);
+const breakpoint = 901;
+
+React.useEffect(() => {
+  const handleWindowResize = () => setWidth(window.innerWidth)
+  window.addEventListener("resize", handleWindowResize);
+  return () => window.removeEventListener("resize", handleWindowResize)
+}, [])
+
   return (
     <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
           <Logo />
           <FlexWrapper justify="space-between" align="center" gap="50px">
-            <DesktopMenu />
-            <MobileMenu />
+            {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
             <SocialLinks />
           </FlexWrapper>
         </FlexWrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
-import { DesktopMenu } from "../../components/nav/DesktopMenu";
+import { DesktopMenu } from "../header/menu/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FooterLogo } from "../../components/logo/FooterLogo";
 import { theme } from "../../styles/Theme";

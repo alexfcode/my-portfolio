@@ -126,7 +126,7 @@ ${font({
     color: "${theme.colors.mainSectionFont}",
     weight: 700,
     Fmax: 48,
-    Fmin: 27,
+    Fmin: 32,
   })};
 
 text-align: center;
@@ -138,13 +138,18 @@ margin-bottom: 50px;
 `;
 
 const SubTitle = styled.h3`
-color: ${theme.colors.secondaryFont};
-font-size: 32px;
+
+${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 700,
+    Fmax: 32,
+    Fmin: 24,
+  })};
 
 text-align: center;
-margin-bottom: 120px;
+margin-bottom: 100px;
 
 @media ${theme.media.mobile} {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 `;

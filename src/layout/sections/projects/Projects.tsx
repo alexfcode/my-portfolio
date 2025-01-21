@@ -82,56 +82,56 @@ export const Projects = () => {
         <SubTitle>Things I’ve built so far</SubTitle>
 
         <GridWrapper>
-        {projectsList.map((p, index) => {
-              return (
-                <Project
-                  // index={p.index}
-                  img={p.img}
-                  title={p.title}
-                  note={p.note}
-                  previewLink={p.previewLink}
-                  codeLink={p.codeLink}
-                  content={p.content}
-                  key={p.index}
-                />
-              );
-            })}
+          {projectsList.map((p, index) => {
+            return (
+              <Project
+                // index={p.index}
+                img={p.img}
+                title={p.title}
+                note={p.note}
+                previewLink={p.previewLink}
+                codeLink={p.codeLink}
+                content={p.content}
+                key={p.index}
+              />
+            );
+          })}
         </GridWrapper>
       </Container>
     </StyledProjects>
   );
 };
 
-const StyledProjects = styled.section`
-  `;
+const StyledProjects = styled.section``;
 
 const Title = styled.h2`
-
-${font({
+  ${font({
     color: "${theme.colors.mainSectionFont}",
     weight: 700,
     Fmax: 48,
-    Fmin: 27,
+    Fmin: 32,
   })};
 
   text-align: center;
   margin-bottom: 50px;
 
   @media ${theme.media.mobile} {
-  margin-bottom: 20px;
-}
+    margin-bottom: 20px;
+  }
 `;
 
 const SubTitle = styled.h3`
-  color: ${theme.colors.secondaryFont};
-  font-size: 32px;
+  ${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 700,
+    Fmax: 32,
+    Fmin: 24,
+  })};
 
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 100px;
 
   @media ${theme.media.mobile} {
-  margin-bottom: 80px;
-}
+    margin-bottom: 50px;
+  }
 `;
-
-

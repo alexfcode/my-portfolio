@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { theme } from "../../../styles/Theme";
+import { S } from "./HeaderMenu_Styles";
 
 const items = [
   {
@@ -25,13 +24,14 @@ const items = [
   },
 ];
 
+
 export const Menu: React.FC = () => {
   return (
     <ul>
       {items.map((item, index) => {
         return (
           <li>
-            <Link href={item.href}>{item.title}</Link>
+            <S.Link href={item.href}>{item.title}</S.Link>
           </li>
         );
       })}
@@ -39,9 +39,4 @@ export const Menu: React.FC = () => {
   );
 };
 
-const Link = styled.a`
-  font-family: "DM Sans";
-  font-size: 20px;
-  font-weight: 500;
-  color: ${theme.colors.secondaryFont};
-`;
+

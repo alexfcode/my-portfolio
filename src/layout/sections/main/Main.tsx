@@ -9,7 +9,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-around" align="center" wrap="wrap">
+        <MainWrapper>
           <TextWrapper>
             <Text>
               Hi 👋,
@@ -22,11 +22,25 @@ export const Main = () => {
           <PhotoWrapper>
             <Photo src={mainPhoto} alt="" />
           </PhotoWrapper>
-        </FlexWrapper>
+        </MainWrapper>
       </Container>
     </StyledMain>
   );
 };
+
+const MainWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+  }
+`;
 
 const StyledMain = styled.section`
   min-height: 100vh;
@@ -74,12 +88,11 @@ const Name = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-white-space: nowrap;
+  white-space: nowrap;
 
-@media ${theme.media.tablet} {
-  margin: 20px 0;
-}
-
+  @media ${theme.media.tablet} {
+    margin: 20px 0;
+  }
 `;
 
 const Text = styled.h2`
