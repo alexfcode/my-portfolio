@@ -1,11 +1,11 @@
-import { FlexWrapper } from "../../components/FlexWrapper";
+import { FlexWrapper } from "../../components/common/FlexWrapper";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { DesktopMenu } from "../header/menu/DesktopMenu";
-import { Container } from "../../components/Container";
+import { Container } from "../../components/common/Container";
 import { FooterLogo } from "../../components/logo/FooterLogo";
 import { S } from "./Footer_Styled";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <S.Footer>
       <Container>

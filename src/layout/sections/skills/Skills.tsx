@@ -1,7 +1,8 @@
-import { FlexWrapper } from "../../../components/FlexWrapper";
+import { FlexWrapper } from "../../../components/common/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
-import { Container } from "../../../components/Container";
+import { Container } from "../../../components/common/Container";
 import { S } from "./Skills_Styles";
+import { SubTitle, Title } from "../../../styles/Common";
 
 const skillsList = [
   {
@@ -94,8 +95,8 @@ export const Skills: React.FC = () => {
   return (
     <S.Skills>
       <Container>
-        <S.Title>My Tech Stack</S.Title>
-        <S.SubTitle> Technologies I’ve been working with recently</S.SubTitle>
+        <Title>My Tech Stack</Title>
+        <SubTitle> Technologies I’ve been working with recently</SubTitle>
         <FlexWrapper wrap="wrap" gap="50px 0">
           {skillsList.map((s, index) => {
             return (

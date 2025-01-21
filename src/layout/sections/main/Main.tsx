@@ -1,5 +1,5 @@
 import mainPhoto from "../../../assets/images/photo.webp";
-import { Container } from "../../../components/Container";
+import { Container } from "../../../components/common/Container";
 import { S } from "./Main_Styles";
 
 export const Main: React.FC = () => {

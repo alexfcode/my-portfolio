@@ -1,8 +1,8 @@
 import { Logo } from "../../components/logo/HeaderLogo";
 import { DesktopMenu } from "./menu/DesktopMenu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
-import { FlexWrapper } from "../../components/FlexWrapper";
-import { Container } from "../../components/Container";
+import { FlexWrapper } from "../../components/common/FlexWrapper";
+import { Container } from "../../components/common/Container";
 import { MobileMenu } from "./menu/MobileMenu";
 import { S } from "./Header_Styles";
 import React from "react";

@@ -29,7 +29,7 @@ export const Menu: React.FC = () => {
     <ul>
       {items.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <S.Link href={item.href}>{item.title}</S.Link>
           </li>
         );

@@ -1,50 +1,40 @@
-import { theme } from '../../styles/Theme'
-import { Icon } from '../icon/Icon'
-import styled from 'styled-components'
+import { Icon } from "../icon/Icon";
+import { S } from "./SocialLinks_Styles";
 
-export const SocialLinks = () => {
-    return (
-        <StyledSocialLinks>
-            <ul>
-                <li>
-                    <StyledLink href="">
-                        <Icon iconId="github_big" width="30"height="30" viewBox='0 0 30 30'/>
-                    </StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="">
-                        <Icon iconId="twitter" width="30"height="30" viewBox='0 0 30 30'/>
-                    </StyledLink>
-                </li>
-                <li>
-                    <StyledLink href="">
-                        <Icon iconId="linkedin" width="30"height="30" viewBox='0 0 30 30'/>
-                    </StyledLink>
-                </li>
-            </ul>
-        </StyledSocialLinks>
-    )
-}
+const linksData = [
+  {
+    href: "#",
+    iconId: "github_big",
+  },
+  {
+    href: "#",
+    iconId: "twitter",
+  },
+  {
+    href: "#",
+    iconId: "linkedin",
+  },
+];
 
-const StyledSocialLinks = styled.div`
-    ul {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        li{
-            transition: 0.2s;
-    &:hover {
-      transform: translateY(-4px);
-      
-    }
-  }
-    }
-
-    @media ${theme.media.tablet} {
-      display: none;
-    }
-    
-`
-
-const StyledLink = styled.a`
-`
+export const SocialLinks: React.FC = () => {
+  return (
+    <S.SocialLinks>
+      <ul>
+        {linksData.map((l, index) => {
+          return (
+            <li key={index}>
+              <S.Link href={l.href}>
+                <Icon
+                  iconId={l.iconId}
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                />
+              </S.Link>
+            </li>
+          );
+        })}
+      </ul>
+    </S.SocialLinks>
+  );
+};

@@ -1,19 +1,8 @@
 import styled from "styled-components";
-import { theme } from "../styles/Theme";
-import { font } from "../styles/Common";
+import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
-export const Form = () => {
-  return (
-    <StyledForm>
-      <Input placeholder={"Name"}></Input>
-      <Input placeholder={"Subject"}></Input>
-      <Input as={"textarea"} placeholder={"Message"}></Input>
-      <Button type={"submit"}>SEND MESSAGE</Button>
-    </StyledForm>
-  );
-};
-
-const StyledForm = styled.form`
+const Form = styled.form`
   max-width: 540px;
   width: 100%;
   display: flex;
@@ -37,10 +26,10 @@ const Input = styled.input`
   font-family: "DM Sans";
   ${font({
     color: "${theme.colors.secondaryFont}",
-      weight: 500,
-      Fmax: 20,
-      Fmin: 18,
-    })};
+    weight: 500,
+    Fmax: 20,
+    Fmin: 18,
+  })};
 
   &::placeholder {
     color: ${theme.colors.placeholderColor};
@@ -54,6 +43,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   min-width: 112px;
+  padding: 20px 0;
   color: ${theme.colors.primeFont};
   transition: 0.2s;
   &:hover {
@@ -62,11 +52,16 @@ const Button = styled.button`
 
   font-family: "DM Sans";
 
-    ${font({
-      color: "${theme.colors.secondaryFont}",
-      weight: 500,
-      Fmax: 20,
-      Fmin: 18,
-    })};
-
+  ${font({
+    color: "${theme.colors.secondaryFont}",
+    weight: 500,
+    Fmax: 20,
+    Fmin: 16,
+  })};
 `;
+
+export const S = {
+  Form,
+  Input,
+  Button,
+};

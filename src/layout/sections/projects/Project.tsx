@@ -1,4 +1,4 @@
-import { FlexWrapper } from "../../../components/FlexWrapper";
+import { FlexWrapper } from "../../../components/common/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { S } from "./Project_Styles";
 

@@ -5,9 +5,10 @@ import Photo3 from "../../../assets/images/projects/work3.webp";
 import Photo4 from "../../../assets/images/projects/work4.webp";
 import Photo5 from "../../../assets/images/projects/work5.webp";
 import Photo6 from "../../../assets/images/projects/work6.webp";
-import { Container } from "../../../components/Container";
-import { GridWrapper } from "../../../components/GridWrapper";
+import { Container } from "../../../components/common/Container";
+import { GridWrapper } from "../../../components/common/GridWrapper";
 import { S } from "./Project_Styles";
+import { SubTitle, Title } from "../../../styles/Common";
 
 const projectsList = [
   {
@@ -76,13 +77,12 @@ export const Projects: React.FC = () => {
   return (
     <S.Projects>
       <Container>
-        <S.Title>Projects</S.Title>
-        <S.SubTitle>Things I’ve built so far</S.SubTitle>
+        <Title>Projects</Title>
+        <SubTitle>Things I’ve built so far</SubTitle>
         <GridWrapper>
-          {projectsList.map((p, index) => {
+          {projectsList.map((p) => {
             return (
               <Project
-                // index={p.index}
                 img={p.img}
                 title={p.title}
                 note={p.note}

@@ -5,7 +5,7 @@ type BurgerButtonPropsType = {
   isOpen: boolean;
 };
 
-export const BurgerButton = (props: BurgerButtonPropsType) => {
+export const BurgerButton: React.FC<BurgerButtonPropsType> = (props: BurgerButtonPropsType) => {
   return (
     <S.BurgerButton>
       <div>{props.isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}</div>
