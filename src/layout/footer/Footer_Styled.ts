@@ -12,7 +12,7 @@ const Footer = styled.footer`
 const TopFooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   @media ${theme.media.mobile} {
     flex-direction: column;
@@ -20,14 +20,6 @@ const TopFooterWrapper = styled.div`
     align-items: center;
     gap:20px;
   }
-`;
-
-const BottomFooterWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
 `;
 
 const PhoneNumber = styled.span`
@@ -47,9 +39,16 @@ const Email = styled.span`
   -webkit-text-fill-color: transparent;
 `;
 
+const BottomFooterWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+`;
+
 const DesignedBy = styled.span`
-  display: inline-block;
-  margin-left: auto;
+  /* margin-left: auto; */
   background: var(
     --Gradient-Heading,
     linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)

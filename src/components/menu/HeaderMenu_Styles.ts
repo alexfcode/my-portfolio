@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../styles/Theme";
+import { theme } from "../../styles/Theme";
 import { Link } from "react-scroll";
 
 // Desktop Menu
@@ -23,7 +23,7 @@ const MenuLink = styled(Link)`
 const Nav = styled.nav`
   height: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   ul {
     display: flex;
     gap: 50px;

@@ -2,6 +2,15 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 
+const Main = styled.section`
+  min-height: 100vh;
+  display: flex;
+
+  @media ${theme.media.tablet} {
+    padding-top: 120px;
+  }
+`;
+
 const MainWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -10,18 +19,9 @@ const MainWrapper = styled.div`
 
   @media ${theme.media.tablet} {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    height: 90%;
-  }
-`;
-
-const Main = styled.section`
-  min-height: 100vh;
-  display: flex;
-
-  @media ${theme.media.tablet} {
-    padding-top: 150px;
+    gap: 20px;
   }
 `;
 
@@ -85,8 +85,8 @@ const MainText = styled.h1`
   ${font({
     color: `${theme.colors.mainSectionFont}`,
     weight: 700,
-    Fmax: 58,
-    Fmin: 36,
+    Fmax: 48,
+    Fmin: 28,
   })};
 
   p {

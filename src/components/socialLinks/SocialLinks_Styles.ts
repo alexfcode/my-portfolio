@@ -13,7 +13,6 @@ const SocialLinks = styled.div`
       }
     }
   }
-
   @media ${theme.media.tablet} {
     display: none;
   }
