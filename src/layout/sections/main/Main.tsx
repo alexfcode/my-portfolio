@@ -15,7 +15,7 @@ export const Main: React.FC = () => {
               <br />
               My name is
             </S.Text>
-            <S.Name>Pavan MG</S.Name>
+            <S.Name>AlexF</S.Name>
             <S.MainText>
               <p>
                 "I'm a Frontend Developer", "I build things for web", "I make

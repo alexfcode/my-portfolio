@@ -17,6 +17,9 @@ const Project = styled.div`
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
   background-color: #363636;
   border: none;
+  @media ${theme.media.tablet} {
+    min-height: 527px;
+  }
 `;
 
 const Image = styled.img`
@@ -30,8 +33,10 @@ const TextWrapper = styled.div`
   flex-direction: column;
   padding: 25px 30px;
   gap: 15px;
-
   line-height: 26px;
+  @media ${theme.media.tablet} {
+    padding: 25px;
+  }
 `;
 
 const ProjectTitle = styled.h3`
