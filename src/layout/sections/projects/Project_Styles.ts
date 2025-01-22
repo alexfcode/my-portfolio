@@ -4,7 +4,9 @@ import { theme } from "../../../styles/Theme";
 
 //PROJECTS
 
-const Projects = styled.section``;
+const Projects = styled.section`
+position: relative;
+`;
 
 //PROJECT
 
