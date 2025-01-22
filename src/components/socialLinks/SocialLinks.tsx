@@ -3,7 +3,7 @@ import { S } from "./SocialLinks_Styles";
 
 const linksData = [
   {
-    href: "#",
+    href: "https://github.com/alexfcode",
     iconId: "github_big",
   },
   {
@@ -11,7 +11,7 @@ const linksData = [
     iconId: "twitter",
   },
   {
-    href: "#",
+    href: "www.linkedin.com/in/alexey-fateev-643067254",
     iconId: "linkedin",
   },
 ];
