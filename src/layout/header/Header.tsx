@@ -1,4 +1,4 @@
-import { Logo } from "../../components/logo/HeaderLogo";
+import { HeaderLogo } from "../../components/logo/HeaderLogo";
 import { DesktopMenu } from "./menu/DesktopMenu";
 import { SocialLinks } from "../../components/socialLinks/SocialLinks";
 import { FlexWrapper } from "../../components/common/FlexWrapper";
@@ -9,7 +9,7 @@ import React from "react";
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 901;
+  const breakpoint = 768;
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
     <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <Logo />
+          <HeaderLogo />
           <FlexWrapper justify="space-between" align="center" gap="50px">
             {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
             <SocialLinks />

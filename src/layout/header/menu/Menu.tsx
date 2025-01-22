@@ -7,10 +7,6 @@ const items = [
     href: "home",
   },
   {
-    title: "About",
-    href: "about",
-  },
-  {
     title: "Tech Stack",
     href: "skills",
   },
@@ -30,7 +26,15 @@ export const Menu: React.FC = () => {
       {items.map((item, index) => {
         return (
           <li key={index}>
-            <S.Link href={item.href}>{item.title}</S.Link>
+            <S.MenuLink
+              activeClass="active"
+              to={item.href}
+              smooth={true}
+              spy={true}
+              offset={-100}
+              >
+              {item.title}
+            </S.MenuLink>
           </li>
         );
       })}

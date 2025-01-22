@@ -93,7 +93,7 @@ const skillsList = [
 
 export const Skills: React.FC = () => {
   return (
-    <S.Skills>
+    <S.Skills id={"skills"}>
       <Container>
         <Title>My Tech Stack</Title>
         <SubTitle> Technologies I’ve been working with recently</SubTitle>

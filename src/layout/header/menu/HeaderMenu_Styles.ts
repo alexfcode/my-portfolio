@@ -1,13 +1,20 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 // Desktop Menu
 
-const Link = styled.a`
+const MenuLink = styled(Link)`
+  display: inline-block;
   font-family: "DM Sans";
   font-size: 20px;
   font-weight: 500;
   color: ${theme.colors.secondaryFont};
+
+  transition: 0.2s;
+  &:hover, &.active {
+    scale: 1.2;
+  }
 `;
 
 const Nav = styled.nav`
@@ -18,20 +25,17 @@ const Nav = styled.nav`
     display: flex;
     gap: 50px;
 
-    li {
+    /* li {
       transition: 0.2s;
       &:hover {
         scale: 1.2;
       }
-    }
+    } */
   }
 
-  @media ${theme.media.tablet}
-
-  {
+  @media ${theme.media.tablet} {
     display: none;
   }
-
 `;
 
 // Mobile Menu
@@ -45,7 +49,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 9999;
-  background-color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 
   display: none;
 
@@ -89,11 +93,15 @@ const BurgerButton = styled.button`
     position: absolute;
     left: 40px;
     bottom: 50px;
+    transition: 0.2s;
+    &:hover {
+      scale: 1.2;
+    }
   }
 `;
 
 export const S = {
-  Link,
+  MenuLink,
   Nav,
   MobileNav,
   MobileMenuPopup,

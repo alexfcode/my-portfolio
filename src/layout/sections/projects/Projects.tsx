@@ -75,7 +75,7 @@ const projectsList = [
 
 export const Projects: React.FC = () => {
   return (
-    <S.Projects>
+    <S.Projects id={"projects"}>
       <Container>
         <Title>Projects</Title>
         <SubTitle>Things I’ve built so far</SubTitle>

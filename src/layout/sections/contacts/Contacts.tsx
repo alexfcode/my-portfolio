@@ -5,7 +5,7 @@ import { Title } from "../../../styles/Common";
 
 export const Contacts: React.FC = () => {
   return (
-    <S.Contacts>
+    <S.Contacts id={"contacts"}>
       <Container>
         <Title>For any questions please contact me:</Title>
         <Form />
