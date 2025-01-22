@@ -11,7 +11,7 @@ const linksData = [
     iconId: "twitter",
   },
   {
-    href: "www.linkedin.com/in/alexey-fateev-643067254",
+    href: "https://linkedin.com/in/alexey-fateev-643067254",
     iconId: "linkedin",
   },
 ];
