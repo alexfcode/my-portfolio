@@ -45,7 +45,7 @@ const Button = styled.button`
   min-width: 112px;
   padding: 20px 0;
   color: ${theme.colors.primeFont};
-  transition: 0.2s;
+  transition: ${theme.animation.transition};
   &:hover {
     scale: 1.2;
   }

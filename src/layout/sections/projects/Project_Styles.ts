@@ -76,7 +76,7 @@ const ProjectLink = styled.a`
     Fmax: 16,
     Fmin: 13,
   })};
-  transition: 0.2s;
+  transition: ${theme.animation.transition};
   &:hover {
     scale: 1.2;
   }

@@ -9,6 +9,7 @@ import { Container } from "../../../components/common/Container";
 import { GridWrapper } from "../../../components/common/GridWrapper";
 import { S } from "./Project_Styles";
 import { SubTitle, Title } from "../../../styles/Common";
+import { Fade } from "react-awesome-reveal";
 
 const projectsList = [
   {
@@ -80,19 +81,21 @@ export const Projects: React.FC = () => {
         <Title>Projects</Title>
         <SubTitle>Things I’ve built so far</SubTitle>
         <GridWrapper>
-          {projectsList.map((p) => {
-            return (
-              <Project
-                img={p.img}
-                title={p.title}
-                note={p.note}
-                previewLink={p.previewLink}
-                codeLink={p.codeLink}
-                content={p.content}
-                key={p.index}
-              />
-            );
-          })}
+          <Fade cascade={true} damping={0.2}>
+            {projectsList.map((p) => {
+              return (
+                <Project
+                  img={p.img}
+                  title={p.title}
+                  note={p.note}
+                  previewLink={p.previewLink}
+                  codeLink={p.codeLink}
+                  content={p.content}
+                  key={p.index}
+                />
+              );
+            })}
+          </Fade>
         </GridWrapper>
       </Container>
     </S.Projects>

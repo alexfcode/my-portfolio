@@ -32,6 +32,7 @@ export const Menu: React.FC = () => {
               smooth={true}
               spy={true}
               offset={-100}
+              duration={500}
               >
               {item.title}
             </S.MenuLink>

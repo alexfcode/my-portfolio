@@ -7,7 +7,7 @@ const SocialLinks = styled.div`
     gap: 10px;
     align-items: center;
     li {
-      transition: 0.2s;
+      transition: ${theme.animation.transition};
       &:hover {
         transform: translateY(-4px);
       }

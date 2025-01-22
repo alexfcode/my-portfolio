@@ -18,12 +18,13 @@ const TopFooterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:20px;
   }
 `;
 
 const BottomFooterWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
@@ -47,7 +48,8 @@ const Email = styled.span`
 `;
 
 const DesignedBy = styled.span`
-  display: block;
+  display: inline-block;
+  margin-left: auto;
   background: var(
     --Gradient-Heading,
     linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%)

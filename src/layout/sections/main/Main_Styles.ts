@@ -6,28 +6,29 @@ const MainWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   height: 100%;
 
   @media ${theme.media.tablet} {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 100px;
+    height: 90%;
   }
 `;
 
 const Main = styled.section`
   min-height: 100vh;
   display: flex;
-  padding-top: 100px;
+
+  @media ${theme.media.tablet} {
+    padding-top: 150px;
+  }
 `;
 
 const TextWrapper = styled.div``;
 
 const PhotoWrapper = styled.div`
-  position: relative;
-
+  /* position: relative; */
   &::before {
     content: "";
   }
@@ -42,9 +43,9 @@ const Photo = styled.img`
   border-radius: 50%;
   object-fit: cover;
 
-  @media ${theme.media.mobile} {
-    width: 320x;
-    height: 320px;
+  @media ${theme.media.tablet} {
+    width: 300x;
+    height: 300px;
   }
 `;
 

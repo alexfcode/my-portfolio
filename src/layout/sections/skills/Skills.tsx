@@ -3,6 +3,7 @@ import { Icon } from "../../../components/icon/Icon";
 import { Container } from "../../../components/common/Container";
 import { S } from "./Skills_Styles";
 import { SubTitle, Title } from "../../../styles/Common";
+import { Fade} from "react-awesome-reveal";
 
 const skillsList = [
   {
@@ -97,19 +98,21 @@ export const Skills: React.FC = () => {
       <Container>
         <Title>My Tech Stack</Title>
         <SubTitle> Technologies I’ve been working with recently</SubTitle>
-        <FlexWrapper wrap="wrap" gap="50px 0">
-          {skillsList.map((s, index) => {
-            return (
-              <Icon
-                iconId={s.iconId}
-                width={"16.66%"}
-                height={s.height}
-                viewBox={s.viewBox}
-                key={s.index}
-              />
-            );
-          })}
-        </FlexWrapper>
+        <Fade cascade={true} damping={0.2}>
+          <FlexWrapper wrap="wrap" gap="50px 0">
+            {skillsList.map((s, index) => {
+              return (
+                <Icon
+                  iconId={s.iconId}
+                  width={"16.66%"}
+                  height={s.height}
+                  viewBox={s.viewBox}
+                  key={s.index}
+                />
+              );
+            })}
+          </FlexWrapper>
+        </Fade>
       </Container>
     </S.Skills>
   );

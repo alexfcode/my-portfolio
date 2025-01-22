@@ -52,7 +52,7 @@ export const SubTitle = styled.h3`
   text-align: center;
   margin-bottom: 100px;
 
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     margin-bottom: 50px;
   }
 `;

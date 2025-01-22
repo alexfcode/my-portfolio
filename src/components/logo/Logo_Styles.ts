@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 const Logo = styled.a`
   &:hover {
-    transition: 0.2s;
+    transition: ${theme.animation.transition};
     &:hover {
       scale: 1.2;
     }

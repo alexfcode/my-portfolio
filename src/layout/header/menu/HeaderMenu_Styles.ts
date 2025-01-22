@@ -11,9 +11,12 @@ const MenuLink = styled(Link)`
   font-weight: 500;
   color: ${theme.colors.secondaryFont};
 
-  transition: 0.2s;
-  &:hover, &.active {
+  transition: ${theme.animation.transition};
+  &:hover,
+  &.active {
+    color: ${theme.colors.linkText};
     scale: 1.2;
+    cursor: pointer;
   }
 `;
 
@@ -24,13 +27,6 @@ const Nav = styled.nav`
   ul {
     display: flex;
     gap: 50px;
-
-    /* li {
-      transition: 0.2s;
-      &:hover {
-        scale: 1.2;
-      }
-    } */
   }
 
   @media ${theme.media.tablet} {
@@ -51,29 +47,30 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   z-index: 9999;
   background-color: rgb(0, 0, 0);
 
-  display: none;
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: 0.6s ease-in-out;
+      
+
+   ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.8s ease-in-out;
+  }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
-
-  ul {
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-    align-items: center;
-
-    li {
-      transition: 0.2s;
-      &:hover {
-        scale: 1.2;
-      }
+    transform: translateY(0);
+    ul {
+      gap: 50px;
     }
-  }
+
+    `}
 `;
 
 const BurgerButton = styled.button`
@@ -93,7 +90,7 @@ const BurgerButton = styled.button`
     position: absolute;
     left: 40px;
     bottom: 50px;
-    transition: 0.2s;
+    transition: ${theme.animation.transition};
     &:hover {
       scale: 1.2;
     }

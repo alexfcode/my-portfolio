@@ -9,7 +9,7 @@ import React from "react";
 
 export const Header: React.FC = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 768;
+  const breakpoint = 769;
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
