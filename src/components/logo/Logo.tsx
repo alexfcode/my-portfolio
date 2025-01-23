@@ -13,7 +13,7 @@ export const Logo: React.FC<LogoPropsType> = (props: LogoPropsType) => {
         scroll.scrollToTop();
       }}
     >
-      <Icon iconId={props.iconId} width="97" height="59" viewBox="0 0 97 59" />
+      <Icon iconId={props.iconId} width="97" height="30" viewBox="0 0 97 30" />
     </S.Logo>
   );
 };

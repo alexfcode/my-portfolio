@@ -99,7 +99,7 @@ export const Skills: React.FC = () => {
         <Title>My Tech Stack</Title>
         <SubTitle> Technologies I’ve been working with recently</SubTitle>
         <Fade cascade={true} damping={0.2}>
-          <FlexWrapper wrap="wrap" gap="50px 0">
+          <FlexWrapper wrap="wrap" gap="20px 0">
             {skillsList.map((s, index) => {
               return (
                 <Icon
