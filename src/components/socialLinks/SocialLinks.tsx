@@ -7,11 +7,11 @@ const linksData = [
     iconId: "github_big",
   },
   {
-    href: "#",
-    iconId: "twitter",
+    href: "https://t.me/fateev_a_v",
+    iconId: "telegram",
   },
   {
-    href: "https://linkedin.com/in/alexey-fateev-643067254",
+    href: "https://linkedin.com/in/fateevalexey",
     iconId: "linkedin",
   },
 ];
